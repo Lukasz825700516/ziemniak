@@ -16,6 +16,7 @@ add_executable(ziemniak
 	${PROJECT_SOURCE_DIR}/dep/imgui/imgui_draw.cpp
 	${PROJECT_SOURCE_DIR}/dep/imgui/imgui_tables.cpp
 	${PROJECT_SOURCE_DIR}/dep/imgui/imgui_widgets.cpp
+	${PROJECT_SOURCE_DIR}/dep/imnodes/imnodes.cpp
 )
 
 target_link_libraries(ziemniak
@@ -27,6 +28,7 @@ target_link_libraries(ziemniak
 target_include_directories(ziemniak
 	PUBLIC ${PROJECT_SOURCE_DIR}/dep/glad/include
 	PUBLIC ${PROJECT_SOURCE_DIR}/dep/imgui
+	PUBLIC ${PROJECT_SOURCE_DIR}/dep/imnodes
 )
 
 target_compile_definitions(ziemniak PUBLIC IMGUI_IMPL_OPENGL_LOADER_GLAD)
