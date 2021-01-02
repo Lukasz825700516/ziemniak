@@ -1,5 +1,5 @@
 # ZIEMNIAK
-Terrain building generator based on rich collection of fillters.
+/ˈʑɛmɲak/ Terrain building generator based on rich collection of fillters.
 
 In future free alternative for Worldmachine.
 

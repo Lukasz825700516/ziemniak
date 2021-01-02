@@ -60,6 +60,9 @@ int main() {
 
         imnodes::BeginNodeEditor();
 
+		imnodes::PushColorStyle(imnodes::ColorStyle_TitleBar, IM_COL32(0, 255 * 0.8, 0, 255));
+		imnodes::PushColorStyle(imnodes::ColorStyle_TitleBarHovered, IM_COL32(255 * 0.1, 255 * 0.8, 255 * 0.1, 255));
+		imnodes::PushColorStyle(imnodes::ColorStyle_TitleBarSelected, IM_COL32(0, 255, 0, 255));
         imnodes::BeginNode(1);
         imnodes::BeginNodeTitleBar();
         ImGui::TextUnformatted("Perlin noise");
@@ -69,6 +72,9 @@ int main() {
         ImGui::Text("heightmap");
         imnodes::EndOutputAttribute();
         imnodes::EndNode();
+		imnodes::PopColorStyle();
+		imnodes::PopColorStyle();
+		imnodes::PopColorStyle();
 
         imnodes::BeginNode(3);
         imnodes::BeginNodeTitleBar();
@@ -83,6 +89,9 @@ int main() {
         imnodes::EndOutputAttribute();
         imnodes::EndNode();
 
+		imnodes::PushColorStyle(imnodes::ColorStyle_TitleBar, IM_COL32(255 * 0.8, 0, 0, 255));
+		imnodes::PushColorStyle(imnodes::ColorStyle_TitleBarHovered, IM_COL32(255 * 0.8, 255 * 0.1, 255 * 0.1, 255));
+		imnodes::PushColorStyle(imnodes::ColorStyle_TitleBarSelected, IM_COL32(255, 0, 0, 255));
         imnodes::BeginNode(6);
         imnodes::BeginNodeTitleBar();
         ImGui::TextUnformatted("Output");
@@ -91,6 +100,9 @@ int main() {
         ImGui::Text("heightmap");
         imnodes::EndOutputAttribute();
         imnodes::EndNode();
+		imnodes::PopColorStyle();
+		imnodes::PopColorStyle();
+		imnodes::PopColorStyle();
 
 		for (int i = 0; i < links.size(); ++i) {
 			const std::pair<int, int> p = links[i];
