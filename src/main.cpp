@@ -36,6 +36,7 @@ int main() {
 	imnodes::Initialize();
 
 	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+	io.MouseDrawCursor = true;
 
 	ImGui::StyleColorsDark();
 	imnodes::StyleColorsDark();
